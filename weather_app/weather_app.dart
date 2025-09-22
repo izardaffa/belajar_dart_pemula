@@ -41,11 +41,11 @@ Future<Weather> getWeather(String cityName) async {
       return Weather.fromJson(jsonData);
     } else {
       throw Exception(
-          'Gagal mendapatkan data cuaca: Kota tidak ditemukan atau terjadi error.');
+          'Gagal memuat data cuaca: Kota tidak ditemukan atau terjadi error.');
     }
   } catch (e) {
     throw Exception(
-        'Gagal terhubung ke server. Periksa koneksi internet Anda.');
+        'Gagal mendapatkan data cuaca: Kota tidak ditemukan atau terjadi error.');
   }
 }
 
